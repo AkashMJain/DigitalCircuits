@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-// gere c = 0 will return Sum and c = 1 will return Carry
+// here c = 0 will return Sum and c = 1 will return Carry
 bool halfAdder(bool X, bool Y, bool c) {
 	bool S,C;
 	S = (X xor Y);
