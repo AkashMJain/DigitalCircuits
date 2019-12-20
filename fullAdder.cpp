@@ -6,23 +6,15 @@ bool halfAdder(bool X, bool Y, bool c) {
 	C = X and Y;
 	return (c==0)?S:C;
 }
-/*bool fullAdder(bool x, bool y, bool z) {
-	bool t = halfAdder(x, y)
-}*/
-
 bool fullAdder(bool x, bool y, bool z, bool c) {
 	bool S,C;
 	S = halfAdder(halfAdder(x,y,0),z,0);
 	C = halfAdder(halfAdder(x,y,0),z,1) or halfAdder(x, y, 1);
-	// C = halfAdder(halfAdder(x,y,0),z,1);
-
-
 	return (c==0)?S:C;
 }
 
 bool TruthTable() {
 	cout << "X" << "\t" << "Y" << "\t" << "Z" << "\t|\t" << "C" << "\t|\t"<< "S"<< endl;
-	// cout << "_" << "_______" << "_" << "_______|_______" << "_" << "_______|_______"<< "_______"<< endl;
 	cout << "_" << "_______" << "_" << "_______" <<"_" << "_______|_______" << "_" << "_______|_______"<< "_______"<< endl;
 
 	for(int i = 0; i < 2; i++) 
@@ -35,10 +27,6 @@ bool TruthTable() {
 	
 }
 int main() {
-	// inputs
 	bool X = true, Y = true;	
 	TruthTable();
-
-
-
 }
