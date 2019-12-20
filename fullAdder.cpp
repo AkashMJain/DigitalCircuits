@@ -27,6 +27,5 @@ bool TruthTable() {
 	
 }
 int main() {
-	bool X = true, Y = true;	
 	TruthTable();
 }
