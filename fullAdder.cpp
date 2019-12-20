@@ -13,8 +13,7 @@ bool halfAdder(bool X, bool Y, bool c) {
 bool fullAdder(bool x, bool y, bool z, bool c) {
 	bool S,C;
 	S = halfAdder(halfAdder(x,y,0),z,0);
-	C = halfAdder(halfAdder(x,y,0),z,1);
-	C = C or halfAdder(x, y, 1);
+	C = halfAdder(halfAdder(x,y,0),z,1) or halfAdder(x, y, 1);
 	// C = halfAdder(halfAdder(x,y,0),z,1);
 
 
